@@ -1,6 +1,6 @@
  const alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
  const numbers = '0123456789';
- const symbols = '!@#$%^&*_-+=';
+ const symbols = '!@#$&*_-+=';
  
  const createPassword = (length = '10',hasNumbers = true,hasSymbols = true  ) =>{
     let chars = alphabet

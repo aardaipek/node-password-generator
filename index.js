@@ -1,6 +1,5 @@
 const program = require('commander');
 const chalk = require('chalk');
-const clipboard = require('clipboardy');
 const createPassword = require('./services/createPassword'); 
 const saveToFile = require('./services/savePassword'); 
 
@@ -16,11 +15,9 @@ program
 const { length,save,numbers,symbols } = program.opts();
 
 const password = createPassword(length,numbers,symbols); 
-clipboard.writeSync(password);
 
 if(save){
     saveToFile(password); 
 }
 
 console.log(chalk.blue('Your Password: ') + chalk.bold(password));
-console.log(chalk.yellow('Password copied'));
